@@ -408,32 +408,34 @@ def svm_accuracy_vs_training_size_with_lr(X_train, y_train, X_val, y_val, X_test
 
 
 print("\n=== Basic SVM Training ===")
-#svm_model, train_loss, val_loss, test_loss = train_svm(
-#    X_train, y_train, X_val, y_val, X_test, test_y,
-#    learning_rate=0.01, max_iter=2000
-#)
-
-#svm_model, train_loss, val_loss, test_loss = train_svm(
-#    X_train, y_train, X_val, y_val, X_test, test_y,
-#    learning_rate=0.0001, max_iter=2000
-#)
 
 
+svm_model, train_loss, val_loss, test_loss = train_svm(
+    X_train, y_train, X_val, y_val, X_test, test_y,
+    learning_rate=0.01, max_iter=2000
+)
 
-#svm_model, train_loss, val_loss, test_loss = train_svm(
-#    X_train, y_train, X_val, y_val, X_test, test_y,
-#    learning_rate=0.000001, max_iter=2000
-#)
+svm_model, train_loss, val_loss, test_loss = train_svm(
+    X_train, y_train, X_val, y_val, X_test, test_y,
+    learning_rate=0.0001, max_iter=2000
+)
+
+
+
+svm_model, train_loss, val_loss, test_loss = train_svm(
+    X_train, y_train, X_val, y_val, X_test, test_y,
+    learning_rate=0.000001, max_iter=2000
+)
 
 
 
 
 
 # 2. Learning rate analysis
-#print("\n=== Learning Rate Analysis ===")
-#svm_accuracy_vs_learning_rate(
-#    X_train, y_train, X_val, y_val, X_test, test_y
-#)
+print("\n=== Learning Rate Analysis ===")
+svm_accuracy_vs_learning_rate(
+    X_train, y_train, X_val, y_val, X_test, test_y
+)
 
 # 3. Training size analysis
 print("\n=== Training Size Analysis ===")
